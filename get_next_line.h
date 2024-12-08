@@ -24,11 +24,11 @@
 
 char *get_next_line(int fd);
 char *ft_line(char **line ,char *buffer);
-size_t	ft_strlen(const char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strdup( char *s1);
 char	*ft_strjoin(char *s1, char  *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 int check_line(char *buff);
 char *ft_read(int fd, char **line,char *buffer);
-
+char *ft_stop(char **buf);
 #endif /* GET_NEXT_LINE_H */
