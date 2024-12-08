@@ -1,17 +1,17 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-fouh <iel-fouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:52:50 by iel-fouh          #+#    #+#             */
-/*   Updated: 2024/12/04 20:35:14 by iel-fouh         ###   ########.fr       */
+/*   Updated: 2024/12/08 11:37:02 by iel-fouh         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 #ifndef BUFFER_SIZE  
 #define BUFFER_SIZE 24
@@ -31,4 +31,5 @@ char	*ft_substr(char *s, unsigned int start, size_t len);
 int check_line(char *buff);
 char *ft_read(int fd, char **line,char *buffer);
 char *ft_stop(char **buf);
-#endif /* GET_NEXT_LINE_H */
+
+#endif /* GET_NEXT_LINE_BONUS_H */

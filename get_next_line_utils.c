@@ -6,22 +6,24 @@
 /*   By: iel-fouh <iel-fouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:52:34 by iel-fouh          #+#    #+#             */
-/*   Updated: 2024/12/04 20:50:05 by iel-fouh         ###   ########.fr       */
+/*   Updated: 2024/12/08 11:36:38 by iel-fouh         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "get_next_line.h"
+
 size_t	ft_strlen(char *str)
 {
 	size_t	i;
 
 	i = 0;
-	if(!str)
-	return i;
+	if (!str)
+		return (i);
 	while (str[i])
 		i++;
 	return (i);
 }
+
 char	*ft_strdup(char *s1)
 {
 	char	*p;
@@ -45,7 +47,6 @@ char	*ft_strdup(char *s1)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*p;
-	size_t	size;
 	size_t	i;
 	int		j;
 
@@ -53,11 +54,10 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = 0;
 	if (!s1 && !s2)
 		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	p = malloc(size);
+	p = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!p)
 		return (NULL);
-	if(s1)
+	if (s1)
 	{
 		while (s1[i])
 		{
@@ -65,28 +65,29 @@ char	*ft_strjoin(char *s1, char *s2)
 			i++;
 		}
 	}
-	if(s2)
-	{
-			while (s2[j])
+	if (s2)
+		while (s2[j])
 			p[i++] = s2[j++];
-	}	
 	p[i] = '\0';
 	return (p);
 }
-int check_line(char *buff)
+
+int	check_line(char *buff)
 {
-    int i;
-    i = 0;
-	if(!buff)
-		return 0;
-    while(buff[i])
-    {
-        if(buff[i] == '\n')
-        return 1;
-        i++;
-    }
-    return 0;
+	int	i;
+
+	i = 0;
+	if (!buff)
+		return (0);
+	while (buff[i])
+	{
+		if (buff[i] == '\n')
+			return (1);
+		i++;
+	}
+	return (0);
 }
+
 char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	char			*p;

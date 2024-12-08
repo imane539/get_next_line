@@ -6,14 +6,14 @@
 /*   By: iel-fouh <iel-fouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:52:50 by iel-fouh          #+#    #+#             */
-/*   Updated: 2024/12/04 20:35:14 by iel-fouh         ###   ########.fr       */
+/*   Updated: 2024/12/08 09:14:26 by iel-fouh         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE  
+#ifndef BUFFER_SIZE
 #define BUFFER_SIZE 24
 #endif /* BUFFER_SIZE */
 
@@ -29,6 +29,6 @@ char	*ft_strdup( char *s1);
 char	*ft_strjoin(char *s1, char  *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 int check_line(char *buff);
-char *ft_read(int fd, char **line,char *buffer);
+char    *ft_read(int fd, char **line, char *buffer);
 char *ft_stop(char **buf);
 #endif /* GET_NEXT_LINE_H */
