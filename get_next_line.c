@@ -70,7 +70,7 @@ char	*ft_read(int fd, char **line, char *buffer)
 		if (ft_strlen(buffer) == 0)
 		{
 			free(buffer);
-			buffer = malloc((size_t)(BUFFER_SIZE + 1));
+			buffer = malloc((size_t)BUFFER_SIZE + 1);
 			if (!buffer)
 				return (NULL);
 			r = read(fd, buffer, BUFFER_SIZE);
